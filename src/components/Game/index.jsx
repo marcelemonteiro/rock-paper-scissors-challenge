@@ -43,9 +43,15 @@ function Game({ setGameScore }) {
 
   useEffect(() => {
     if (play.user && play.computer) {
-      calculatePoints(play);
+      const result = calculatePoints(play);
+
+      if (result) {
+        setGameScore((score) => score + 1);
+      }
+
+      setIsUserWin(result);
     }
-  }, [play]);
+  }, [play, setGameScore]);
 
   const calculatePoints = (currentPlay) => {
     // currentPlay = { user: "", computer: "" }
@@ -54,13 +60,6 @@ function Game({ setGameScore }) {
         winningPlay.user === currentPlay.user &&
         winningPlay.computer === currentPlay.computer
     );
-
-    setIsUserWin(result);
-
-    if (result) {
-      setGameScore((score) => score + 1);
-    }
-
     return result;
   };
 
