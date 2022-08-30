@@ -4,7 +4,7 @@ React app of the game rock-paper-scissors.
 
 ## Demonstration
 
-[link for github page here]
+Github pages: https://marcelemonteiro.github.io/rock-paper-scissors-challenge/
 
 ## Linguages and tools
 
