@@ -1,0 +1,61 @@
+.header {
+  width: 100%; /* porque o componente pai está com display flex e align-items center */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 3.5px solid var(--header-outline);
+}
+
+.header-logo {
+  flex: 1;
+}
+
+.header-logo img {
+  width: 95px;
+  height: 60px;
+}
+
+.header-score {
+  background-color: #fff;
+  padding: 0.5rem 1.6rem;
+  border-radius: 0.2rem;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.header-score span {
+  text-transform: uppercase;
+  color: var(--score-text);
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+}
+
+.header-score h2 {
+  font-size: 2.4rem;
+}
+
+.resetScore-btn {
+  background-color: transparent;
+  text-transform: uppercase;
+  border: none;
+  color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    max-width: 40%;
+  }
+
+  .header-logo img {
+    width: 110px;
+    height: 75px;
+  }
+
+  .header-score h2 {
+    font-size: 3rem;
+  }
+}
