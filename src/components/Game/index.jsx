@@ -34,7 +34,6 @@ function Game({ setGameScore }) {
       const gameSymbolsFiltered = gameSymbols.filter(
         (symbol) => symbol !== play.user
       );
-      console.log(gameSymbolsFiltered);
       const computer = gameSymbolsFiltered[randomIndex];
 
       setPlay((play) => ({ ...play, computer }));
